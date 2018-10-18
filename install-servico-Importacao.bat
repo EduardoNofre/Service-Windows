@@ -186,7 +186,7 @@ echo.
 
 cd %BASE_DIR%
 
-%NSSM% install "%SERVICE_NAME%" java -jar -Dlogback.configurationFile=%LOGBACK_FILE% %SERVER_JAR% %FOLDER_CONFIG%
+%NSSM% install "%SERVICE_NAME%" java -Xmx1024m -jar -Dlogback.configurationFile=%LOGBACK_FILE% %SERVER_JAR% %FOLDER_CONFIG%
 %NSSM% set "%SERVICE_NAME%" AppDirectory "%BASE_DIR%"
 %NSSM% set "%SERVICE_NAME%" DisplayName "%SERVICE_NAME%"
 %NSSM% set "%SERVICE_NAME%" Description "Importação de imagem Jucec"
